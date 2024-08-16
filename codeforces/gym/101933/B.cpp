@@ -32,14 +32,28 @@ const int inf = 1e9 + 7;
 
 int n;
 int a[N];
+stack<int> st;
 string str;
 string s[N];
-stack<int> st;
 priority_queue<pii, vector<pii>, greater<pii>> dHeap;
 multiset<int> ms;
 
 void Solve()
 {
+    cin >> n;
+    fto(i, 1, n)
+    {
+        cin >> s[i];
+    }
+    fto(i, 1, n)
+    {
+        if (s[i] != "mumble" && stoi(s[i]) != i)
+        {
+            cout << "something is fishy";
+            return;
+        }
+    }
+    cout << "makes sense";
 }
 
 int32_t main()
