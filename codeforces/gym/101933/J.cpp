@@ -2,7 +2,7 @@
  *    author:  namduong93
  *    created: unknown
  *    complexity: unknown
- *    test: 0 0 0 0, 1 1 1 0
+ *    test: 0 0 0 0, 1 1 1 0, 0 1 0 0
  **/
 #include <bits/stdc++.h>
 using namespace std;
