@@ -6,6 +6,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+#define int long long
 #define fto(i, a, b) for (int i = a; i <= b; ++i)
 #define fdo(i, a, b) for (int i = a; i >= b; --i)
 #define mp make_pair
@@ -29,15 +30,32 @@ const int mod = 998244353;
 const int N = 300005;
 const int inf = 1e9 + 7;
 
-int n;
+int n, k;
 int a[N];
-string str;
+string str, t;
+string s[N];
 stack<int> st;
 priority_queue<pii, vector<pii>, greater<pii>> d_heap;
 multiset<int> ms;
 
 void Solve()
 {
+    cin >> n >> k;
+    cin >> str >> t;
+    int tmp = 1;
+    int result = 0;
+    for (int i = 0; i < str.length(); ++i)
+    {
+        tmp = tmp * 2;
+        if (str[i] == 'b')
+            tmp--;
+        if (t[i] == 'a')
+            tmp--;
+        if (tmp > k)
+            tmp = inf;
+        result += min(tmp, k);
+    }
+    cout << result;
 }
 
 int32_t main()
